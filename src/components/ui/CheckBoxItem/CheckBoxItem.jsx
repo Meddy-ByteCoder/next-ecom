@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useMemo } from "react";
-import "./CheckboxItem.scss";
+import "./CheckBoxItem.scss";
 import { Checkbox } from "../core/checkbox";
 import { useRouter, useSearchParams } from "next/navigation";
 
