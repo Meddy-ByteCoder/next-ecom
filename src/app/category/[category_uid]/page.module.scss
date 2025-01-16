@@ -1,0 +1,111 @@
+@import '../../../styles/helper.scss';
+
+.plp {
+    &-wrapper {
+        padding-top: 25px;
+        display: grid;
+        grid-template-rows: auto;
+        column-gap: 30px;
+        grid-template-columns: minmax(200px, 292px) 1.5fr 1fr;
+        grid-template-areas:
+            "filters heading sortby"
+            "filters products products"
+        ;
+        container-name: plpFilter;
+        container-type: inline-size;
+        grid-template-rows: 52px;
+
+        @include mobile {
+            padding-top: 0px;
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                "filters"
+                "sortby"
+                "heading"
+                "products"
+            ;
+
+        }
+    }
+
+    &-filter-panel {
+        box-sizing: border-box;
+    }
+
+    &-heading {
+        &-container {
+            grid-area: heading;
+            display: flex;
+            align-items: start;
+            margin-top: 5px;
+
+            @include mobile {
+                grid-area: heading;
+                display: flex;
+                align-items: start;
+                margin-top: 5px;
+                grid-column: 1;
+            }
+
+        }
+
+        &-title {
+            h2 {
+                color: #262626;
+                font-size: 12px;
+                font-weight: 700;
+                line-height: 16px;
+                margin-right: 1px;
+            }
+        }
+
+        &-product-summary {
+            color: #7b7b7b;
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 16px;
+        }
+    }
+
+    &-sortby-container {
+        margin-top: 5px;
+        grid-area: sortby;
+
+        @include mobile {
+            display: none;
+        }
+    }
+
+    &-products-container {
+        grid-area: products;
+
+    }
+
+    &-products {
+        display: grid;
+        gap: 30px;
+        margin-top: 20px;
+        margin-bottom: 25px;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        @include mobile {
+            gap: 25px 15px;
+            grid-template-columns: 1fr 1fr;
+            grid-column-start: 1;
+            grid-column-end: 1;
+        }
+
+        @include mobile-sm {
+            grid-template-columns: 1fr;
+            grid-column-start: 1;
+            grid-column-end: 1;
+        }
+
+    }
+
+    &-pagination-container {
+        margin-bottom: 40px;
+    }
+
+
+}

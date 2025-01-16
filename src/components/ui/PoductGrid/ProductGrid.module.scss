@@ -1,0 +1,58 @@
+@import "../../../styles/helper.scss";
+
+.product-grid {
+    &-container {
+        // display: block;
+        padding-top: 48px;
+
+        @include mobile {
+            padding-top: 24px;
+            // padding-bottom: 24px;
+        }
+    }
+
+    &-title {
+        h3 {
+            color: #262626;
+            font-family: var(--font-nohemi);
+            font-size: 32px;
+            font-weight: 600;
+            line-height: 40px;
+
+            @include mobile {
+                font-size: 24px;
+                line-height: 30px;
+            }
+        }
+    }
+
+    &-products {
+        margin-top: 16px;
+        // overflow: hidden;
+    }
+
+    &-link {
+        display: inline-flex;
+        margin-top: 0px;
+        position: relative;
+        right: unset;
+        top: unset;
+        border-radius: 40px;
+        background-color: #000;
+        cursor: pointer;
+        display: block;
+        font-family: robotoBold, sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px;
+        max-width: -webkit-fit-content;
+        max-width: -moz-fit-content;
+        max-width: fit-content;
+        padding: 10px 16px;
+
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+}

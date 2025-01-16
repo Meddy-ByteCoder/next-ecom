@@ -1,0 +1,62 @@
+@import '../../../styles/helper.scss' ;
+
+
+.product-grid-filter {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    list-style: none;
+    gap: 8px;
+    margin-top: 16px;
+    cursor: pointer;
+
+    @include mobile {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+
+        margin-bottom: 24px;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    &-tab {
+        background-color: transparent;
+        border: 1px solid #555;
+        border-radius: 40px;
+        color: #555;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 16px;
+        min-width: 108px;
+        padding: 9px 10.5px;
+        text-align: center;
+
+        @include mobile {
+            padding: 4px 10.5px;
+        }
+
+
+
+        &.active {
+            background-color: #d60611;
+            border: 1px solid #d60611;
+            color: #fff;
+            font-family: robotoMedium, sans-serif;
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 16px;
+        }
+
+    }
+
+    &.extra-mt {
+        margin-top: 30px;
+    }
+
+}

@@ -1,0 +1,66 @@
+@import './../../../styles/helper.scss';
+
+.container {
+  overflow-x: auto;
+  white-space: wrap;
+  scrollbar-width: none;
+  border-bottom: 1px dotted #9d9d9d;
+
+  @include mobile{
+    margin-top: 16px;
+  }
+}
+
+.slider {
+  display: flex;
+  gap: 10px;
+}
+
+.card {
+  flex: 0 0 auto;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  margin-bottom: 16px;
+}
+
+
+.card img {
+  margin-right: 10px;
+  max-width: 64px;
+  height: auto;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10px;
+}
+
+.cardContent h3 {
+  font-size: 12px;
+}
+
+.cardContent p {
+  font-size: 10px;
+  margin: 0;
+}
+
+
+
+.separator {
+  width: 1px;
+  height: 40px;
+  margin-left: 10px;
+  border-right: 1px dotted #ddd;
+}

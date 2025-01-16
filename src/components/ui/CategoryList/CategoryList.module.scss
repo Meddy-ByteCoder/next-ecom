@@ -1,0 +1,56 @@
+@import '../../../styles/helper.scss';
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 16px ;
+  margin-bottom: 16px;
+  overflow: scroll;
+  scrollbar-width: none;
+
+  @include mobile{
+    gap: 16px;
+  }
+}
+
+.category {
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  text-align: center; 
+  padding-bottom: 24px;
+  padding-top: 8px;
+  width: auto;
+  min-width: 184px;
+  padding-bottom: 32px;
+  padding-top: 16px;
+
+  @include mobile{
+    padding: 16px 0;
+    min-width: 76px;
+  }
+}
+
+.categoryIcon{
+  @include mobile{
+    height: 69px;
+    width: 59px;
+  }
+}
+
+
+.categoryName {
+  color: #262626;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  text-align: center;
+
+  @include mobile{
+    color: #262626;
+    font-size: 9px;
+    font-weight: 500;
+    line-height: 11px;
+    text-align: center;
+  }
+}

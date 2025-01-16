@@ -1,0 +1,61 @@
+@import "../../../styles/helper.scss";
+
+.plp {
+
+    &-filter-panel {
+        box-sizing: border-box;
+    }
+
+    &-filter-header {
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &-title {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            &-img {
+                width: 24px;
+                height: auto;
+            }
+
+            &-child {
+                color: #262626;
+                font-size: 21px;
+                font-weight: 500;
+                line-height: 27px;
+            }
+        }
+
+        &-clear-btn {
+            display: flex;
+            align-items: center;
+
+            * {
+                margin-top: 1px;
+                color: #555;
+                font-size: 12px;
+                font-weight: 500;
+                line-height: 16px;
+                text-decoration: underline;
+
+                @include tab {
+                    display: none;
+                }
+            }
+
+        }
+
+    }
+
+    &-filter-mobile-drawer-close {
+        display: none;
+
+        @include mobile {
+            display: block;
+        }
+    }
+}

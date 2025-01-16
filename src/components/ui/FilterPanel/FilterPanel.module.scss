@@ -1,0 +1,54 @@
+@import "../../../styles/helper.scss";
+
+.plp {
+
+    &-filter-container {
+        grid-area: filters;
+        position: sticky;
+    }
+
+    @container plpFilter (width < 500px) {
+        &-filter-container {
+            // position: fixed;
+            bottom: 0;
+            left: 0;
+            gap: 5px;
+            // padding: 11px;
+            background: white;
+            justify-content: center;
+            width: 100%;
+        }
+    }
+
+    &-filter-header-mobile {
+        border-bottom: 1px solid #d9d9d9;
+        border-top: 1px solid #d9d9d9;
+        padding: 10px 0px;
+
+        display: flex;
+        margin-bottom: 16px;
+
+        &-item {
+            flex: 1 1 50%;
+            display: flex;
+            justify-content: center;
+
+            * {
+                display: flex;
+                gap: 2px;
+                justify-content: center;
+                align-items: center;
+                color: #262626;
+                font-size: 12px;
+                font-weight: 500;
+                line-height: 16px;
+            }
+
+            &:first-child {
+                border-right: 1px solid #d9d9d9;
+            }
+        }
+
+    }
+
+}

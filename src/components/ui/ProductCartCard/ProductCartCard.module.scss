@@ -1,0 +1,483 @@
+@import './../../../styles/helper.scss';
+
+.cardDesc{
+    // border-radius: 8px;
+    // max-width: 864px;
+    // width: 100%;
+
+    &-card{
+        border: 1px solid #dcdcdc;
+        border-radius: 8px;
+        margin-bottom: 20px;
+
+        &-wrap{
+            margin: 0 auto;
+            max-width: 825px;
+            padding: 0px 20px;
+            &-product{
+                display: flex;
+                justify-content: space-between;
+                padding-top: 20px;
+
+                &-left{
+                    display: flex;
+                    gap: 16px;
+                    justify-content: center;
+                    
+                    &-checkbox{
+                        align-items: end;
+                        cursor: pointer;
+                        display: flex;
+                        height: 35px;
+
+                        &-input{
+                            -webkit-appearance: none;
+                            -moz-appearance: none;
+                            appearance: none;
+                            border: 1px solid #000;
+                            border-radius: 2px;
+                            cursor: pointer;
+                            height: 18px;
+                            outline: none;
+                            position: relative;
+                            width: 18px;
+
+                            &:checked{
+                                background-color: #000;
+                                background-image: url('https://www.vijaysales.com/content/dam/vijaysaleswebsite/cart-checkout/checkbox-cart.svg');
+                                background-position: 50%;
+                                background-repeat: no-repeat;
+                                background-size: auto;
+                                cursor: pointer;
+                                display: block;
+                            }
+                        }
+                    }
+                    &-img{
+                        cursor: pointer;
+                        height: 100%;
+                        max-width: 130px;
+                        object-fit: contain;
+                        object-position: top;
+                        width: 100%;
+
+                        @include mobile{
+                            max-width: 62px;
+                        }
+                    }
+                }
+                &-right{
+                    display: flex;
+                    gap: 32px;
+                    justify-content: space-between;
+                    padding-top: 10px;
+                    width: calc(100% - 190px);
+                    @include mobile{
+                        flex-direction: column;
+                        align-items: flex-start;
+                        gap: 16px;
+                        max-width: 67%;
+                        width: 100%;
+                    }
+
+                    &-title{
+                        cursor: pointer;
+                        max-width: 292px;
+                        position: relative;
+                        width: 50%;
+
+                        @include mobile{
+                            width: 100%;
+                        }
+
+                        &-desc{
+                            color: #262626;
+                            font-size: 12px;
+                            font-weight: 500;
+                            line-height: 16px;
+                            margin-top: 4px;
+                        }
+                    }
+
+                    &-qty {
+                        align-items: flex-start;
+                        background: #fff;
+                        color: #000;
+                        display: flex;
+                        font-size: 12px;
+                        font-weight: 400;
+                        gap: 4px;
+                        height: 48px;
+                        justify-content: center;
+                        line-height: 16px;
+                        min-width: 110px;
+                        padding: 0;
+                        width: fit-content;
+                        position: relative;
+            
+                        
+            
+                        &-inner {
+                            background: #fff;
+                            border: 1px solid #9d9d9d;
+                            border-radius: 4px;
+                            overflow: hidden;
+                            padding: 4px 7px;
+                            position: absolute;
+                            width: 100%;
+                            z-index: 1;
+                            border-radius: 100px;
+                            padding: 0;
+            
+                            &.active {
+                                border-radius: 20px;
+                                z-index: 2;
+                            }
+            
+                            &-selected {
+                                color: #000;
+                                font-size: 12px;
+                                font-weight: 700;
+                                line-height: 16px;
+                                line-height: 26px;
+                                padding: 11px 13px;
+                                position: relative;
+
+                                @include mobile{
+                                    line-height: 16px;
+                                }
+            
+                                &::before {
+                                    content: "Qty";
+                                    display: inline-block;
+                                    font-weight: 400;
+                                    margin-right: 12px;
+                                    text-align: center;
+                                    width: 30px;
+                                }
+            
+                                &::after {
+                                    right: 13px;
+                                    top: 50%;
+                                    -webkit-transform: translateY(-50%);
+                                    transform: translateY(-50%);
+                                    content: url('https://www.vijaysales.com/content/dam/vijaysaleswebsite/icons/dropdownicon.svg');
+                                    display: block;
+                                    position: absolute;
+                                    transition: all .5s;
+                                }
+                            }
+            
+                            &-list {
+                                border-top: none;
+                                cursor: pointer;
+                                max-height: 90px;
+                                overflow-y: scroll;
+                                padding: 0 20px;
+            
+                                &::-webkit-scrollbar {
+                                    width: 1px
+                                }
+            
+                                &::-webkit-scrollbar-thumb {
+                                    background: #c4c4c4;
+                                    border-radius: .5px;
+                                }
+            
+                                &-option {
+                                    &-li {
+                                        color: #555;
+                                        font-size: 12px;
+                                        font-weight: 400;
+                                        line-height: 16px;
+                                        padding-top: 14px;
+                                        position: relative;
+                                        padding: 11px 0;
+                                    }
+                                }
+                            }
+                        }
+                    }   
+
+                    &-price{
+
+                        align-items: flex-end;
+                        display: flex;
+                        -ms-flex-direction: column;
+                        flex-direction: column;
+
+                        @include mobile{
+                            align-items: flex-start;
+                        }
+
+                        &-amt{
+                            color: #262626;
+                            font-size: 16px;
+                            font-weight: 700;
+                            line-height: 20px;
+                            text-align: left;
+                        }
+
+                        &-discount{
+                            -webkit-box-pack: end;
+                            -ms-flex-pack: end;
+                            display: -webkit-box;
+                            display: -ms-flexbox;
+                            display: flex;
+                            gap: 8px;
+                            justify-content: flex-end;
+                            margin-top: 4px;
+                            width: 100%;
+
+                            @include mobile{
+                                justify-content: flex-start;
+                            }
+
+                            &-amt{
+                                color: #7b7b7b;
+                                font-size: 12px;
+                                font-weight: 400;
+                                line-height: 16px;
+                                text-align: left;
+
+                                &-strikeoff{
+                                    text-decoration: line-through;
+                                }
+                            }
+
+                            &-percentage{
+                                background: #d60611;
+                                border-radius: 16px;
+                                color: #fff;
+                                font-size: 12px;
+                                font-weight: 500;
+                                line-height: 16px;
+                                padding: 0px 8px;
+                            }
+                        }
+
+                        &-reward{
+                            -webkit-box-align: center;
+                            -ms-flex-align: center;
+                            align-items: center;
+                            display: -webkit-box;
+                            display: -ms-flexbox;
+                            display: flex;
+                            gap: 4px;
+                            padding-bottom: 8px;
+
+                            &-content{
+                                text-wrap: nowrap;
+                                text-wrap: wrap;
+                                color: #262626;
+                                font-size: 12px;
+                                font-weight: 400;
+                                line-height: 16px;
+                                margin-top: 5px;
+                                text-align: left;
+
+                                &-text{
+                                    text-wrap: nowrap;
+                                    color: #262626;
+                                    font-size: 12px;
+                                    font-weight: 700;
+                                    line-height: 16px;
+                                    text-align: left;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &-points{
+                margin-top: 8px;
+                padding-bottom: 16px;
+
+                &-loyalty-points{
+                    -webkit-box-pack: end;
+                    -ms-flex-pack: end;
+                    -webkit-box-orient: vertical;
+                    -webkit-box-direction: normal;
+                    -webkit-box-align: end;
+                    -ms-flex-align: end;
+                    align-items: flex-end;
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -ms-flex-direction: column;
+                    flex-direction: column;
+                    justify-content: flex-end;
+
+                    @include mobile{
+                        align-items: start;
+                        width: 67%;
+                    }
+
+                    &-wishlist{
+                        -webkit-box-pack: center;
+                        -ms-flex-pack: center;
+                        -webkit-box-align: center;
+                        -ms-flex-align: center;
+                        align-items: center;
+                        display: -webkit-box;
+                        display: -ms-flexbox;
+                        display: flex;
+                        gap: 16px;
+                        justify-content: center;
+
+                        &-left{
+                            -webkit-box-pack: center;
+                            -ms-flex-pack: center;
+                            -webkit-box-align: center;
+                            -ms-flex-align: center;
+                            align-items: center;
+                            cursor: pointer;
+                            display: -webkit-box;
+                            display: -ms-flexbox;
+                            display: flex;
+                            gap: 4px;
+                            justify-content: center;
+
+                            &-move-to-wishlist{
+                                font-size: 12px;
+                                font-weight: 500;
+                                line-height: 16px;
+                                text-align: right;
+                            }
+
+                            &-move-content{
+                                color: #262626;
+                                font-size: 12px;
+                                font-weight: 500;
+                                line-height: 16px;
+                                text-align: right;
+                                text-decoration: underline;
+                            }
+                        }
+
+                        .separator{
+                            border: 1px solid #9d9d9d;
+                            height: 16px;
+                        }
+
+                        &-right{
+                            cursor: pointer;
+                            display: flex;
+                            gap: 4px;
+
+                            &-delete{
+                                color: #262626;
+                                font-size: 12px;
+                                font-weight: 500;
+                                line-height: 16px;
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+            }
+            &-description{
+                border-top: 1px solid #dcdcdc;
+                display: flex;
+                justify-content: space-between;
+                margin-left: auto;
+                max-width: 616px;
+                padding: 16px 0px;
+                width: 100%;
+
+                :is(:not(input[type='radio']:checked)){
+                    &+.custom-radio{
+                        background-color: transparent;
+                        border: 1px solid #9d9d9d;
+                    }
+                }
+
+                input[type='radio']{
+                    display: none;
+
+                    &:checked{
+                        +.custom-radio{
+                            &::after{
+                                display: block;
+                            }
+                        }
+                    }
+                }
+
+                .custom-radio{
+                    background-color: #000;
+                    border: 2px solid #000;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    display: inline-block;
+                    height: 14px;
+                    position: relative;
+                    width: 14px;
+
+                    &::after{
+                        background-color: #fff;
+                        border-radius: 50%;
+                        content: "";
+                        display: none;
+                        height: 7px;
+                        left: 2px;
+                        position: absolute;
+                        top: 2px;
+                        width: 7px;
+                    }
+                }
+
+                &-delivery-radio{
+                    cursor: pointer;
+                    display: flex;
+                    gap: 8px;
+                    max-width: 255px;
+                    width: 100%;
+                    
+                   
+                }
+
+                &-pick-up{
+                    cursor: pointer;
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    gap: 8px;
+                    max-width: 330px;
+                    position: relative;
+                    width: 100%;
+
+                    &-text{
+                        max-width: 205px;
+                        padding-right: 24px;
+
+                        &::after{
+                            background-image: url('https://www.vijaysales.com/content/dam/vijaysaleswebsite/cart-checkout/ChevronRight.svg');
+                            content: "";
+                            height: 24px;
+                            position: absolute;
+                            right: 3px;
+                            top: 14px;
+                            width: 24px;
+                        }
+                        p{
+                            color: #262626;
+                            font-size: 14px;
+                            font-weight: 700;
+                            line-height: 18px;
+                        }
+                        &-store{
+                            &-address{
+                                color: #555;
+                                font-size: 12px;
+                                font-weight: 400;
+                                line-height: 16px;
+                                text-align: left;
+                            }
+                        }
+                    }
+                }   
+            }
+        }
+    }
+}

@@ -1,0 +1,47 @@
+@import "../styles/helper.scss";
+
+
+.text {
+  font-family: "roboto";
+  font-weight: 500;
+}
+
+.bestseller {
+  &-wrapper {
+    position: relative;
+    padding-bottom: 72px;
+
+    @include mobile {
+      padding-bottom: 24px;
+
+    }
+  }
+
+  &-bg-img {
+    z-index: -10;
+  }
+}
+
+
+.promotion-offer {
+  &-banner {
+    position: relative;
+    height: 360px;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-top: 40px;
+
+    @include mobile {
+      height: 442px;
+    }
+  }
+
+  &-products {
+    margin: 24px 0px 0px;
+    padding-bottom: 48px;
+
+    @include mobile {
+      margin: 16px 0px 0px;
+    }
+  }
+}
