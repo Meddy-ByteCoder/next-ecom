@@ -2,7 +2,7 @@ import localFont from "next/font/local";
 import "../styles/helper.scss";
 import "../styles/globals.scss";
 
-import Header from "@/components/layout/Header";
+// import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import getDevice from "services/getDevice";
 import MobileHeader from "@/components/layout/MobileHeader";
