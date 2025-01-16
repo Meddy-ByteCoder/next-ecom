@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useMemo, useRef, useState } from "react";
-import s from "./header.module.scss";
+import s from "./Header.module.scss";
 import Link from "next/link";
 import Image from "next/image";
 import { useMediaQuery } from "hooks/useMediaQuery";
