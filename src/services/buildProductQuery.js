@@ -77,10 +77,13 @@ export default function buildProductQuery({ filters, sort, pageSize = 30, curren
 
 
   for (const [key, value] of Object.entries(filters)) {
-    if (value instanceof String && value.includes(",")) {
+    if (typeof value === "string" && value.includes(",")) {
       variables.filters[key] = { in: value.split(",").map((v) => v.trim()) };
-    } else {
+    } else if (Array.isArray(value)) {
       variables.filters[key] = { in: value };
+    }
+    else {
+      variables.filters[key] = { in: [value] };
     }
   }
 
